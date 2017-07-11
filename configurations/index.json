@@ -1,0 +1,22 @@
+{
+	"library_path":"https://cbs.wappsystem.com/dev/github",
+	"parts_path":"https://vmiis.github.io/parts",
+	"image_path":"https://image.datalinkedin.com",
+	"api_path_development":"https://cbs.wappsystem.com/dev/",
+	"api_path_production":"https://rt.woolcock.org.au/",
+	"modules":
+	{
+		"signin":
+		{
+			"url":"https://woolcock-imr.github.io/online-questionnaire/modules/signin.html"
+		}
+		,"questionnaire":
+		{
+			"url":"https://vmiis.github.io/modules/panels/questionnaire.html"
+		}
+	},
+	"task_panel_urls":{
+		"20010811":"https://woolcock-imr.github.io/powersleep-recruitment-questionnaire-management/configurations/main-panel.json",
+		"20011119":"https://woolcock-imr.github.io/hdeeg-mci/configurations/main-panel.json"
+	}
+}
