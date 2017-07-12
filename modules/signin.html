@@ -88,7 +88,7 @@
 					}
 				}
 				//---------------------------
-				_sys={
+				var sys={
 					config:config,
 					UID:0,
 				}
@@ -96,10 +96,10 @@
 					name:'',
 					mobj:_mobj,
 					record:{UID:0},
-					sys:_sys
+					sys: sys
 				}
 				$vm.load_module_by_name(module,undefined,op,function(){
-					load_quest_panel(participant_uid,login_setup_tid,participant,task_list);
+					load_quest_panel(sys,participant_uid,login_setup_tid,participant,task_list);
 				});
 				//---------------------------
 			},'text').fail(function() {
@@ -108,11 +108,11 @@
 			//----------------------------------------------------------------------
 		}
 		//-----------------------------------------------
-		var load_quest_panel=function(participant_uid,login_setup_tid,participant,task_list){
+		var load_quest_panel=function(sys,participant_uid,login_setup_tid,participant,task_list){
 			var op={
 				//------------------------
 				mobj:_mobj,
-				sys:_sys,
+				sys:sys,
 				//------------------------
 				participant_uid:participant_uid,
 				participant:participant,
