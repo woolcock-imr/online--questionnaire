@@ -65,8 +65,11 @@
 				alert('No project main panel configuration');
 				return;
 			}
+			var module_path=url.split('?module_path=')[1];
+			url=url.split('?')[0];
 			url+='?_v='+$vm.version+$vm.reload;
 			url=$vm.url(url);
+			console.log('loading '+url);
 			$.get(url,function(txt){
 				var text=$('<div/>').html(txt).text();
 				//---------------------------
@@ -96,7 +99,8 @@
 					name:'',
 					mobj:_mobj,
 					record:{UID:0},
-					sys: sys
+					sys: sys,
+					module_path:module_path,
 				}
 				$vm.load_module_by_name(module,undefined,op,function(){
 					load_quest_panel(sys,participant_uid,login_setup_tid,participant,task_list);
