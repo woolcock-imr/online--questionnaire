@@ -40,7 +40,7 @@
             }
             var participant_uid=a[0];
             var login_setup_tid=a[1];
-			var url=_sys.config.task_panel_urls[login_setup_tid]
+			var url=_sys.config.task_panel_urls[login_setup_tid]; //this is the individual app main-panel configuration
 			//----------------------------------------------------------------------
 			$VmAPI.request({data:{cmd:'participant_signin_v2',username:username,password:password},callback:function(res){
                 if(res.ret=="1"){
@@ -60,6 +60,7 @@
             }})
     	});
 		//-----------------------------------------------
+		//loading the individual app main-panel
 		var load_project_panel=function(url,participant_uid,login_setup_tid,participant,task_list){
 			if(url==""){
 				alert('No project main panel configuration');
@@ -81,7 +82,7 @@
 					alert("Error in app config file\n"+e);
 					return;
 				}
-				var	panel_url=config.url;
+				var	panel_url=config.url; //this is individual app panel url (typcal main-panel,panel.2.html)
 				//---------------------------
 				var module="L_0";
 				if($vm.module_list[module]==undefined){
@@ -102,7 +103,9 @@
 					sys: sys,
 					module_path:module_path,
 				}
+				//load main-panel first
 				$vm.load_module_by_name(module,undefined,op,function(){
+					//then load questionnaire panel
 					load_quest_panel(sys,participant_uid,login_setup_tid,participant,task_list);
 				});
 				//---------------------------
