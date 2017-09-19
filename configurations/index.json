@@ -18,6 +18,7 @@
 	"task_panel_urls":{
 		"20010811":"https://woolcock-imr.github.io/powersleep-recruitment-questionnaire-management/configurations/main-panel.json",
 		"20011119":"https://woolcock-imr.github.io/hdeeg-mci/configurations/main-panel.json?module_path=https://woolcock-imr.github.io/hdeeg-mci",
-		"20011178":"https://woolcock-imr.github.io/clinic-registration-management/configurations/main-panel.json?module_path=https://woolcock-imr.github.io/clinic-registration-management"
+		"20011178":"https://woolcock-imr.github.io/clinic-registration-management/configurations/main-panel.json?module_path=https://woolcock-imr.github.io/clinic-registration-management",
+		"20010819":"https://woolcock-imr.github.io/flat/configurations/main-panel.json?module_path=https://woolcock-imr.github.io/flat"
 	}
 }

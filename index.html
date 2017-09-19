@@ -65,7 +65,9 @@ $(document).ready(function(){
 			$vm.debug        =true;
 		}
 		//--------------------------------------------------------
-		if(window.location.toString().indexOf('server=development')!=-1 || window.location.toString().indexOf('database=demonstration')!=-1){
+		if(window.location.toString().indexOf('server=development')!=-1 || window.location.toString().indexOf('database=demonstration')!=-1
+			|| window.location.toString().indexOf('database=development')!=-1
+		){
 			$vm.server          ='development';
 			$VmAPI.api_base     =config.api_path_development;
 		}
